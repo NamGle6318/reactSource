@@ -1,0 +1,111 @@
+0. 설명
+    js로 가능한거 - 웹/ 프로그램 개발 (vscode, atom, slack 등)
+
+    js 런타임
+    web browser, node.js
+
+    node.js = google에서 2009년도 개발, 서버에서 실행가능하게 함 == spring boot와 같음
+
+    npm : package를 실행하는 명령어
+    yarn : npm 보다 향상
+
+    npm, yarn 사이트에서 package 다운받을 수 있음 == maven repository랑 같은 개념
+
+    자바스크립트 기반 프론트 엔드 기술 
+    - React, Vue, Svelte, Angular
+
+    react : js 기반 라이브러리 독특한 친구임
+
+라이브러리 설치 방법
+    npm 에서 라이브러리 설치방법
+        명령어 : npm i 패키지명
+    
+    yarn 에서 설치방법
+        1. npm에서 yarn 설치
+        2. yarn add 패키지명 입력
+        자주 쓰는거 : yarn add tailwindcss @tailwindcss/vite
+    
+    또는 사이트 접속해서 가능
+
+react 개발 환경
+    1. Node.js 설치 (패키지 관리도구 npm이 설치됨)
+
+    2. yarn 설치(선택사항, 패키지 관리도구임 npm 보다 좋음)
+        명령어 : npm i --global yarn // i = install
+        확인 : yarn --version
+
+    3. extension 설치
+
+    4. react 프로그램 생성
+        npx create-react-app 앱이름 (전통적인 방법)
+
+        vite 환경에서 react 프로그램 생성 
+            yarn create vite => 하나씩 골라가면서 정하기
+
+        한번에 하는 법 => 한번에 다 쓰기
+            yarn create vite  앱이름 --template react
+
+    5. project 구조 
+        package.json : Node 기반의 프로젝트는 가지고 있음 == pom.xml
+        eslint.config.js : JS 문법 검사(eslint) 도구의 환경설정 파일
+        vite.config.js : vite 환경설정 파일
+    
+    
+
+
+
+    명령어 
+        서버 열기 
+            yarn dev : 작성하는 코드 실시간 반영확인하며 페이지 개발
+                press h + enter to 
+                    Shortcuts
+                        press r + enter to restart the server
+                        press u + enter to show server url   
+                        press o + enter to open in browser   
+                        press c + enter to clear console     
+                        press q + enter to quit
+
+            yarn build : 개발된 코드들을 하나로 합쳐서 서비스할 수 있는 상태로 만듦
+                        -> dist 폴더 생성
+                            src 폴더 안 jsx 파일들은 번들러(packaging)를 이용해 최적화 작업을 하게 됨
+            
+            yarn preview : 미리보기(서버에 배포된 후 실행결과 보기) [포트가 다름]
+
+
+"컴포넌트 파일은 대문자로 생성"
+
+jsx 문법
+    - 자바스크립트 확장 문법
+    - 브라우저 실행되기 전에 코드가 번들링(웹팩) 되는 과정에서 바벨(js 문법으로 변환)을 사용하여
+    일반 자바스크립트 코드로 변환됨
+
+    - 변수 사용하고 싶으면 중괄호 안에 넣어서 사용
+    - 리턴값은 반드시 하나의 태그로 만들어서 보내야함 (<> </>, or 태그들)
+        - if 문 대신에 보통 삼항연산자 사용
+
+        - &&를 사용한 조건부 렌더링 ( 참인 경우에만 동작)
+        - ?? or ||: null or undefined 인 경우 뒤에 오는 값을 반환
+          단 ""empty string일 경우 ??는 반응하지 않고 ||는 반응함
+          결론 
+            && : 일치
+            ?? : 뭐라도 있으면 됨 
+            || : 뭐라도 있어야 되는데 ""은 안됨
+
+        
+    css style
+        1. css 파일 작성 후 import하기
+        2. 별도의 css 파일 없이 해당 파일 내에 선언 = inline 방식
+        3. jsx 안에서 스타일 선언
+        css Module : 컴포넌트마다 스타일 클래스명이 중첩되는 걸 방지 -> 임의로 이름 생성됨
+
+    props : properties 줄임말
+        component 사이에서 데이터를 전달 시 사용 
+        부모 => 자식 O 
+        자식 => 부모 X
+
+    children : 자식 태그 사이에 있는 내용은 children 변수에 담김 
+        주로 외부에 레이아웃 컴포넌트를 구성한 뒤 내용을 자유롭게 채울 때 사용
+
+
+state 
+    
