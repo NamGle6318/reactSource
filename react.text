@@ -33,6 +33,12 @@ react 개발 환경
     2. yarn 설치(선택사항, 패키지 관리도구임 npm 보다 좋음)
         명령어 : npm i --global yarn // i = install
         확인 : yarn --version
+        ex :
+             - yarn add tailwindcss @tailwindcss/vite 
+             - yarn add axios
+             - yarn add react-icons
+
+    
 
     3. extension 설치
 
@@ -107,14 +113,27 @@ jsx 문법
         주로 외부에 레이아웃 컴포넌트를 구성한 뒤 내용을 자유롭게 채울 때 사용
 
 
-use~~~~ : hook
+hook : 
     useState() : 새로운 UI 반영
         const [count, setCount] = useState()
         = setCount에 의해 count 값의 변화 발생시 웹페이지를 재 랜더링 한다.(== 새로고침) 
-    useRef : useState() 발생 시 재 랜더링 될 떄 랜더링과 관계 없이 변경된 값들을 유지
+    useRef() : useState() 발생 시 재 랜더링 될 떄 랜더링과 관계 없이 변경된 값들을 유지
              컴포넌트가 특정 정보를 기억해야 할 필요가 있을 때 사용
              ex 스크롤바 위치, 포커스 설정, 특정 요소의 크기 가져오기와 같은 dom 선택
-    
+    useReducer() : 
+    useMemo() :
+    useCallback() : 해당 함수가 랜더링 시 매번 재생성 되지 않게 만듦
+    React.memo() : 
+    custom hook : hook을 입맛에 맞게 생성 가능
+                  시작시 use가 반드시 들어가 있어야함
 
 재랜더링 : useState() 
     - 부모가 재랜더링 시 자식도 재랜더링 됨. 자식이 재랜더링 시 부모는 그대로임
+
+
+콜백함수
+무한콜백
+    해결방법
+        promise
+        async/await
+
