@@ -20,6 +20,14 @@ import InputRef from "./InputRef.jsx";
 import Profile from "./Profile.jsx";
 import UserProfile from "./UserProfile.jsx";
 import Form from "./Form.jsx";
+import Life from "./Life.jsx";
+import FetchBook from "./FetchBook.jsx";
+import Reducer from "./Reducer.jsx";
+import Memo from "./Memo.jsx";
+import Average from "./average.jsx";
+import Parent from "./Parent.jsx";
+import Counter from "./Counter.jsx";
+import BookList from "./BookList.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -50,7 +58,15 @@ function App() {
       {/* <InputRef /> */}
       {/* <Profile /> */}
       {/* <UserProfile /> */}
-      <Form />
+      {/* <Form /> */}
+      {/* <Life /> */}
+      {/* <FetchBook /> */}
+      {/* <Reducer /> */}
+      {/* <Memo /> */}
+      {/* <Average /> */}
+      {/* <Parent /> */}
+      {/* <Counter /> */}
+      <BookList />
     </>
   );
 }

@@ -10,7 +10,6 @@ import MyStyle from "./MyStyle.jsx";
 createRoot(document.getElementById("root")).render(
   // <StrictMode>
   <App />
-
   //{/* <MyStyle /> */}
   //{/* <MyComponent /> */}
   //{/* <Book /> */}
