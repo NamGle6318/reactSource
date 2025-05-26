@@ -37,6 +37,7 @@ react 개발 환경
              - yarn add tailwindcss @tailwindcss/vite 
              - yarn add axios
              - yarn add react-icons
+             - yarn add react-router-dom
 
     
 
