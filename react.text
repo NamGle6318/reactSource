@@ -104,6 +104,7 @@ jsx 문법
         2. 별도의 css 파일 없이 해당 파일 내에 선언 = inline 방식
         3. jsx 안에서 스타일 선언
         css Module : 컴포넌트마다 스타일 클래스명이 중첩되는 걸 방지 -> 임의로 이름 생성됨
+        react-bootstrap 설치해서 사용해도 됨 (react에서는 tailwind가 압도적으로 사용됨)
 
     props : properties 줄임말
         component 사이에서 데이터를 전달 시 사용 
