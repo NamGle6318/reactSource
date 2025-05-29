@@ -15,6 +15,7 @@ export const useFetch = () => {
     totalPage: 0,
   };
   const [data, setData] = useState(initState);
+  console.log(data);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -32,7 +33,7 @@ export const useFetch = () => {
         setLoading(false);
       })
       .catch((e) => setError(e.message));
-  }, [data]);
+  }, []);
 
   return { data, loading, error, toggleAvailable };
 };
