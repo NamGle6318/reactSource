@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getList } from "../api/bookApi";
+import { getList, putAvailableBook } from "../api/bookApi";
 
 export const useFetch = () => {
   const initState = {
@@ -18,6 +18,13 @@ export const useFetch = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const toggleAvailable = (id, curAvailable) => {
+    putAvailableBook({ id: id, available: !curAvailable }).then((data) => {
+      console.log(data);
+    });
+  };
+
+  // 전체 리스트
   useEffect(() => {
     getList()
       .then((res) => {
@@ -25,7 +32,7 @@ export const useFetch = () => {
         setLoading(false);
       })
       .catch((e) => setError(e.message));
-  }, []);
+  }, [data]);
 
-  return { data, loading, error };
+  return { data, loading, error, toggleAvailable };
 };

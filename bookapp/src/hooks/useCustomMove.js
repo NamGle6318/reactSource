@@ -18,7 +18,20 @@ const useCustomMove = () => {
 
   const queryDefault = createSearchParams({ page, size, genre, keyword }).toString();
 
-  const moveToList = () => {};
+  const moveToList = (pageParam) => {
+    let queryStr = "";
+    if (pageParam) {
+      const page = queryParams.get("page", 1);
+      const size = queryParams.get("size", 10);
+      const genre = queryParams.get("genre", 0);
+      const keyword = queryParams.get("keyword", "");
+
+      queryStr = createSearchParams({ page, size, genre, keyword }).toString();
+    } else {
+      queryStr = queryDefault;
+    }
+  };
+
   const moveToEdit = (id) => {
     navigate({
       pathname: `/edit/${id}`,
